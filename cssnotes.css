@@ -1,0 +1,460 @@
+/* mdn css have https://developer.mozilla.org/en-US/docs/Web/CSS */
+/* do not write your css in line in your program */
+/* it gets difficult to share the style with other documents and other people  because */
+/* write the style other documents*/
+/* color 
+h2{
+    color: teal;
+    background-color: rgb(89,151,0 );
+}
+botton{
+    color:green;
+    background-color:#000000;
+}
+p{
+    color:blueviolet;
+    background: orange;
+}
+/* RGB color model  */
+/* rgb(red,green,blue)*/
+/* Hexa decimal */
+/* hexa decimal selected using hexa decimal which is base 16*/
+/* ABCDEF F=15 */
+/* FF FF 00: ff=255, ff=255, 00= no blue
+this hexa system will give us from zero to 55 
+you can use these colors for coloring
+
+Font weigt used for bold or not bold 
+Text decoration: controles underline or over line or line-through
+blue underline
+blue underline wavy(gives a wavy line)
+text-decoration = none which takes the line off the links(helps us to remove the line on the
+when on hovering)
+line-height controles the line height of the text (controles height of text)
+letter-spacacing 15px used to change the spacing between spaces
+
+FONT SIZE:
+Pixels: it is not responded for responsive website
+font-size = 100px
+font-family: this is not simple, most font are not supported every platform therefore
+it is better to use google font when the page is loaded
+font-family: aerial,fall back font-family;
+font-family: choosen font, backup font-family; this is how you can use a font family
+and when your choice is not found then the font can go to the next font that you choose
+you can also choose a font family instead of choosing the single font.  
+
+SELECTORS:
+select {
+    property
+}
+universal selector: or *(star), not commly used because you will need to change some 
+some attribute therefore it is not great to use a universal element
+*{
+    color black
+}
+element selector: select elements and you can select as many as you want
+h1,h3{
+    color:black
+}
+idselector:
+to single out one thing on the page
+#id{
+    this is how you reference the ids
+    ids have to be unique on the page
+    properties
+    ex color: black:
+}
+class selector: this is like an id for groups makers
+.classname{
+    properties and this can be as many as you want or you can have all elements 
+
+}
+Descendant selector:selects the decendent of an element
+select the decendant
+example: in this example all anchor tags will be style
+li a {
+ color:teal; 
+}
+you can also do .class a{ this will applied to all links under the class name 
+    color:red;
+}
+
+header a{ this will be applied to the links under the header
+    font-size:30px;
+    color:teal;
+}
+this select the links in a paragraph whose id is dislikes
+#dislikes a{  this will be applied to links that are located where the id is equal 
+    to dislikes
+    color:red;
+    font-weight:bold;  t
+}
+
+Ajacent Selectors: 
+example bellow selects the paragram that comes right after h1
+which means the pragram will be made red
+h1 + p{ 
+    color : red
+}
+direct child: direct child of the div will be selected
+div > li{
+color: red; 
+}
+another example is: this is not common
+footer> a{
+    color: green
+}
+Attribute selector
+this will select input where the type is equal to text and make it red
+input[type ="text"]{
+color: red; 
+}
+you can do this too
+will select a section whose class is post
+section.post{ this will select the the section where class is post and make it red 
+    color: red
+}
+ This select a link that has google in it or anywhere the anchor tag and
+ this is case sensitive and this is not common in the styling
+a[href*="google"]{
+    color: red;
+}
+PSEUDO CLASSES: they are modifiers
+a:hover{
+    oranger
+}
+example
+botton:hover{ when you hover on the botton, then make that bottom point red
+    color: red
+}
+hover 
+.post botton:hover{
+text-decoration = underline 
+}
+Example when button active will show this colors and background
+button:active{
+    background-color: green; 
+}
+ section(
+.post:nth-of-type(2n){  this will style everyother section of the class post)
+    background-color:green;(do not use the world color instead use hexa color)
+}
+Exercise: 
+
+WRITE YOUR CODE IN HERE!!!!  
+.square:nth-of-type(even){style even class sections
+    background-color:black;
+}
+
+.square:nth-of-type(odd){ style odd class sections
+    background-color:red;
+}
+
+Pseudo elements
+first letter: select firt letter of each
+example:
+this will make the first letter size be 50px
+h2::first-letter{
+    font-size: 50px 
+}
+p::first-line{
+    color:purple; // this makes the first line of the pragraph to purple
+}
+p::selection{
+    background-color:yellow;  this will make yellow each selection you make on the 
+    pragraph
+    look into psdo elements(***** study this one in details)
+}
+
+The cascade:
+
+this means that the order matter when the older values are overriden
+
+Specificity: 
+THE more the specific the element the more it is likely to be choosen by the browser
+id, class and the element is order of the specificity
+you can also see the winner by googling specificity calculator  in css
+
+this is more specific therefore higher priority
+.post button:hover{ go the post class and then go to the botton, this makes this 
+    very specific 
+    background-color: red; 
+    bolor: green
+}
+this is not specific therefore noopriority
+.post:hover{
+    background-color: red; 
+    bolor: green 
+}
+id takes more priority than any of the othe text
+Dev tools with specificity(use these tools to so often)(**** learn how to use dev tools)
+avoid inline styles: they can lead to confusion 
+!important: this overrides everything and make the 
+botton{
+    background-color : magenta !important; this overrides everything and please
+    do not use them
+}
+INHERITANCE
+if you have a body and you give the color to it such as green then everything will be green
+in the body 
+some elements such as botton do not inherit from the body so what you can do is something 
+like
+botton, input{
+    color: inherit; and this will inherit from the body
+}
+borders are not inherted
+Box model
+Padding
+margin
+border radius
+
+content box example when you have a div you can do the following
+div{
+    width:200px; 
+    height: 100px; 
+    background-color: green
+}
+border: 
+#one{
+    border-width =3px means that it is three pixels on each side
+    border-style:solid this means a solid line 
+    border-style: dashed is also nather border style 
+    box-sizing: border-box this means that the content fit right to the border
+    no extraspace on each borders side
+    border:thickness style color;
+    border:4px solid black; 4px is thickness
+    you can update it 
+    border-left -style:doted; 
+    border-radius:10px, 50% is circular
+    
+    EXAMPLES
+    .card{
+    width:210px;
+    border:1px solid grey;
+    border-radius:5px;
+    text-align:center;
+  
+  }
+img{
+    width:200px;
+    border:5px solid rgb(236,183,191);
+    border-radius:50%; percentages does x and y axis at the sametime   
+}
+}
+padding:
+this is used to have space between the border and the text
+padding-left: 100px gives us 100px space on the left of our text
+padding: 10px this will be added to the four sides
+padding:topandbottom left right
+example
+padding:10px 5px; 
+
+Margin:
+out side the border with something else around the 
+margin:0px and at the beginning of creating a webpage, make margin to zero of the body
+to make sure that the margin does not mess up with your design
+margin-left:10px; 
+margin-right: 15px
+
+Display property:
+inline block inline-block
+block-level elements width is respected
+
+
+inline
+changes the block level elements to be inline elements
+display:inline; makes block to appear in line such as headings 
+
+inline block: 
+mergin and padding are respected
+inline-block: this is so important
+
+Units in Css:
+example on pixels
+section{
+    width: 800px; 
+    height:800 px; 
+}
+div{
+    background-color:orange; 
+    width:50%;
+    height:50%;
+    this will created a box that is 50% size compared to the above section 
+    which will act as a parent boxes.
+    percentages are relative to something else
+    when percentage is used after font then it will be referencing the font 
+    but when used with width and height then it is referenceing the parent border 
+
+}
+
+em unit: these are relative element units
+this inhert the parent size and change according to the value of ems 
+example
+parent element is section 
+section{
+    font-size = 30px; 
+}
+child is h2 
+h2{
+    font-size = 2em; this means that h2 will be twice the section element
+}
+ems are useful when we are refrencing the text inside the box like the following 
+article{
+    font-size:50px; this is the parent element and each one of the children will 
+    depend on it when ems unit are used
+    button{ 
+        this will provide  better  radius and padding referencing the articles because 
+        ems unit were used. 
+        font-size : 1em; 
+        padding: 0 1em; 
+        border-radius: 0.5em; 
+        background-color: cyan; 
+        color: white; 
+    }
+}
+rems: 
+issues with ems is that when we used, they may lead to huge content or small content 
+when nested content are so many. 
+therefore we are going to user REMS because those take the size of the html root fontsize
+therefore they do not change except if the the rooot of document changes
+html{
+    font-size: 10px; this will be the biginning size for rems
+}
+button{ 
+        border-radius: 0.5rem;  this makes the  botton depend on 
+        background-color: cyan; 
+        color: white; 
+    }
+Opacity and the alpha channel
+varies from 0 to 0ne 
+alpha affect the background element
+rgba(255,255,0,0.5)
+
+opacity goes from zero to one
+opacity affect all the elements such as text 
+opacity:0.3
+
+Positions: 
+static is positioned as static
+#static #middle{
+    position:static
+    top: 100px this does not change anything about the element because this class with 
+    middle id is declared static 
+}
+
+#relative helps with positinoning the element according to where it was supposed to do 
+#relative #middle{
+    position:relative; 
+    top: 100px   this will move the section up 100px and leave space where it was 
+}
+
+#Absolute positioning
+
+#absolute #middle{
+    position:absolute; 
+    top: 100px  this will move the secition up 100px but will not leave a space in content
+    flow depend on the parent properties
+    or it goes to the location compared 
+///// position:fixed; it is like absolute but it stays there when it you scroll 
+
+READ ABOUT STICKY POSITION 
+
+}
+Transtions
+.circle{
+    with:300px; be a rectangle when shown 
+    height:300px;
+    background-color:magenta; 
+    transition:1s this changes from rectangle to cicle in a second 
+    or you can do 
+
+    transition: background color 3s; this means that it will take 3 sectonds for the 
+    background color to change
+   You can also specify delay of 1s 
+   transition: background color 3s 1s; delay of one second
+   transition: all 1s 1s;  // all changes in 1 second and delays 1second
+   
+   Transition: background-color 1s, border-radius 2s; one second for back groud color 
+   to change and then 2s for the radius to change
+}
+.circle:hover{
+    background-color:cyan; 
+      border-radius:50% be a cycle at hover 
+}
+
+transition keeps going
+section div{
+    transition:margin-left 3s; 
+}
+section:hover div{
+    margin-left : 500px this moves 500px when hovered over to the left and its 
+    three seconds
+}
+
+time functions
+this changes how the change happens such as fast at the start and slows at the end of the 
+transition
+example
+div:nth-of-type(4){
+    transition-timing-function : cubic-bezier(0.85,0,0.15,1) 
+      transition-timing-function : ease-in; faster then slow
+        transition-timing-function :easy out  slow then faster you can see more here 
+        https://easings.net/
+
+        Transion: a properperty like color, how long you want to animate that in seconds of ms
+        timing function , delay and default is no delay;
+
+
+}
+Transform: 
+section:first-of-type h1:nth-of-type(1){
+    transform-orgin:bottome right rotate on the right conner
+    transform:rotatate(45degre); 
+    transform:scale(o.6) this shrinks the object to o.6 in all sides
+    transform:translageX(300PX) moves left 
+    transform:translate(-100px,500px)
+    transform:skew(30deg); 
+    transform:translateX(-500PX) rotate(180deg)scaleY(1.5); 
+}
+back ground image
+section{
+    width:80%;
+    height :800px; 
+    background-color : purple; 
+    margin: 0 auto; // this centers the content
+    bagraound-size:cover; // clops image
+    background-position: top // show top 
+    if you want to use position and cover 
+    like we can have image background then center/cover you see that the positon was 
+    directly followed by size
+   
+    Google fonts:
+
+    FLEX BOXES: notes are in the app.css
+    display:flex(this turns on the flex boxs) which brings in the main axis and cross axis
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex; 
+    /* this shows  the direction of the main axis which run from left to right
+    you can also use flex-direction: row-reverse and this runs from right to left  */
+    /* flex-direction: row-reverse;  */
+    /* this will make the axis from bottom up */
+    /* flex-direction: column;  */
+    /* left to right and we can do wrap */
+    flex-direction: row; 
+    /* this takes the content to the right */
+    /* justify-content: flex-end;  */
+    justify-content: center;
+    /* this leave an equal amount of space between the boxes */
+    justify-content: space-between; 
+    /* this leaves the space around each content */
+    justify-content: space-around; 
+    /* space evenly */
+    justify-content:space-evenly;
+    /* flex wrap it wraps around the main axis*/
+    flex-wrap: wrap;
+    /* flex-wrap:nowrap then there will not be a wrap  */
+    flex-wrap: nowrap;
+    /* used to reverse the main axis from left for right*/
+    /* flex-wrap: wrap-reverse;  */
+    /* disbributing spaces to crosses axis */
+    /* the following code put the content to the top */
+    /* when main is from top to bottom then cross axis is from left to right */
+    /* align content used to controle the space between the rows and the coloms */
+    /* used to controle content along the cross axis */
+    align-items: flex-start;
+    /* the following code put the content to the bottom */
+    align-items:flex-end ;
+    /* this put the line in the center
+       cross axis: used to adjust along vertical or horizantal depending on the axis */
+    align-items: center;
+    /* the following code makes the code to align on the base */
+    /* align-items: baseline; */
+    /* controling space between the rows*/
+    /* align self is used to apply the individual element */
+}
+#container div{
+   width: 200px;
+   height: 200px;
+}
+/* this will make the last box in div to align to the center
+using align-self is the one way to position individual element in the flex box */
+div:nth-of-type(5){
+align-self: flex-start;
+}
+/* flex-basis: 400px; is along main axis and it defines the size of an element before the additional 
+spaces is distributed  in the example that we have above the element will be 400px when it 
+shows up initially*/
+/* flex-grow: helps with growing the space to accupy the available space and it takes a unit 
+size */
+/* flex-shrink:2;this shows how the object shring when thethere is no space available 
+in this example  the box will sh*/
+/* flex: this combines all the flex boxes. when there are 
+three values then first value will be flex grow, second value will be flex shrink, and the 
+third values will be flex basis 
+when flex:2 2; one two is for flext grow and the other is for flex-shrink
+flex:2; when one number then this means flex-grow */
+
+/* Responsive design: responsive according to the devices
+and to do this we need media queries
+
+@mdedian(min-width :800px){
+    h1{
+        color: purple;
+    }
+}
+you can use and
+
+@mdedian(min-width :800px) and (max-width :1000px){
+    h1{ this means that when the screen size reaches 800px and up  then make the heading 1 turn purple
+
+        color: purple;
+    }
+}
+@media(orientation:landscape){
+    h1{
+        background-color:geen
+    }
+}
+
+*/
+

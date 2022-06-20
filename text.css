@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    /* 700 is bolded font */
+    font-weight: normal;
+    text-decoration-line:underline wavy;
+}
+p{
+    text-align: center;
+    text-transform: uppercase;
+    font-family:monospace;
+    text-align:center;
+    font-weight:100;
+    font-size: 40PX; 
+    letter-spacing:20px;
+    text-decoration:underline plum wavy;
+}

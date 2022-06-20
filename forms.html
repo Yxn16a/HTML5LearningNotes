@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Forms</h1>
+        <form action="/tacos" method="get">
+            <p>
+                <label for="username"> enter a user name</label>
+                <input type="text" placeholder="username" id="username" name="username">
+            </p>
+            <p>
+                <label for="password">Enter password</label>
+                <!-- name is very crutial to send the data to the database -->
+                <input type="password" placeholder="password" id="password" name="password">
+            </p>
+            <button>submit</button>
+        </form>
+        <!-- search different engine using their links hidjacking the searches-->
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" id="">
+            <button>search google</button>
+        </form>
+        <!-- More inputs checked boxes-->
+        <form action="/birds">
+            <p>
+                <lebel for="agree">I agree to everything </lebel>
+                <input type="checkbox" name="agree_to" , id="agree" checked>
+            </p>
+            <p>
+                <!-- radio botton -->
+                <!-- for example let us choose size -->
+                <!-- value is what is sent in our database and name 
+                is what connect these radio button -->
+                <label for="xs">extra small</label>
+                <input type="radio" name="size" id="xs" value="xs">
+
+                <label for="s">small</label>
+                <input type="radio" name="size" id="s" value="s">
+
+                <label for="m">medium</label>
+                <input type="radio" name="size" id="m" value="m">
+            </p>
+            <!-- select element -->
+            <p>
+                <!-- the value is what will be sent to the database
+            which means its name is smillar to the value we have in the data base-->
+                <!-- we can use selected to preselect the values or you can have empty  -->
+                <select name="meal" id="meal">
+                    <option value="">select from these options</option>
+                    <option value="fish">Fish</option>
+                    <option value="veg">Vegies</option>
+                    <option value="steak">Steak</option>
+                </select>
+            </p>
+            <p>
+                <!-- the other option for input is the rang -->
+                <!-- you can add steps -->
+                <label for="cheese"> Amount of Cheese: </label>
+                <input type="range" value="75" id="cheese" min="1" max="100" name="cheese_level" step="7">
+            </p>
+            <p>
+                <!-- you can also do numbers  -->
+                <!-- name is what is going to be submitted  to the data base -->
+                <label for="milk"> Amount of Cheese: </label>
+                <input type="number" value="75" id="milk" min="1" max="100" name="cheese_level">
+            </p>
+
+            <p>
+                <!-- text area -->
+                <label for="story">Any special request?</label>
+                <br>
+                <textarea id="story" rows="5" cols="40" name="requests" placeholder="tell your story"></textarea>
+            </p>
+            <button>submit</button>
+        </form>
+       <!-- form validations -->
+       <!-- you can use regulary expression -->
+       <!-- type can be email and make someone to enter an email -->
+       <!-- entering a telephone -->
+       <br>
+        <form action="/dog">
+
+            <label for="username">Username</label>
+            <input type="text" name="" id="username" required placeholder="Username"
+             minlength="5" maxlength="20">
+
+             <button> submit</button>
+        </form>
+
+    </body>
+
+</html>
